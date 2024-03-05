@@ -1,9 +1,9 @@
 require_relative '../entities/Account.rb'
 
 print "Account number: "
-accountNumber = gets.chomp.to_i
+account_number = gets.chomp.to_i
 print "Account holder: "
-accountHolder = gets.chomp
+account_holder = gets.chomp
 
 option = nil
 
@@ -16,14 +16,14 @@ end
 
 if (option == 'y')
   print "What the value? $"
-  initialDeposit = gets.chomp.to_f
-  while initialDeposit <= 0
+  initial_deposit = gets.chomp.to_f
+  while initial_deposit <= 0
     print "--- Invalid input! Please enter a valid deposit value: $"
-    initialDeposit = gets.chomp.to_f
+    initial_deposit = gets.chomp.to_f
   end
-  account = Entities::Account.new(accountNumber, accountHolder, initialDeposit)
+  account = Entities::Account.new(account_number, account_holder, initial_deposit)
 else
-  account = Entities::Account.new(accountNumber, accountHolder)
+  account = Entities::Account.new(account_number, account_holder)
 end
 
 puts account

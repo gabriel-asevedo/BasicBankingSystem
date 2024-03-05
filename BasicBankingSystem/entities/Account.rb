@@ -2,13 +2,13 @@ module Entities
   class Account
     #I'm not using - attr_accessor -
 
-    def initialize(accountNumber, name, balance = 0.0)
-      @accountNumber = accountNumber
+    def initialize(account_number, name, balance = 0.0)
+      @account_number = account_number
       @name = name
       @balance = balance
     end
 
-    def accountNumber
+    def account_number
       @accountNumber
     end
 
@@ -37,7 +37,7 @@ module Entities
     end
 
     def to_s
-      format("\n\tAccount Data\nAccount: %.0f\nHolder: %s\nBalance: $%.2f\n", @accountNumber, @name, @balance)
+      format("\n\tAccount Data\nAccount: %.0f\nHolder: %s\nBalance: $%.2f\n", @account_number, @name, @balance)
     end
 
   end
